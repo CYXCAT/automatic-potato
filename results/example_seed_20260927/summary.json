@@ -1,0 +1,264 @@
+{
+  "accepted": [
+    {
+      "fingerprint": "4d82268dfc57",
+      "report": {
+        "checks": {
+          "bounded": true,
+          "build": true,
+          "complexity": true,
+          "diversity": true,
+          "finite": true,
+          "goal_variation": true,
+          "observation_space": true,
+          "rollout": true,
+          "variance": true
+        },
+        "messages": [
+          "complexity: initial environment",
+          "diversity: fingerprint 4d82268dfc57 is new",
+          "build: built Meta-World/MT1 reach-v3",
+          "finite: checked 160 transitions",
+          "observation_space: all observations belong to declared space",
+          "bounded: absolute observations <= 1000.0",
+          "variance: mean trajectory variance=0.00049878",
+          "rollout: random/scripted sanity rollout completed",
+          "goal_variation: observed 2/2 expected distinct sampled goals"
+        ],
+        "metrics": {
+          "complexity": {
+            "constraints": 0.0,
+            "family": 0.0,
+            "time_pressure": 16.8,
+            "total": 24.7248,
+            "variation": 7.9248
+          },
+          "episodes": 2,
+          "reward_max": 2.1390265777456134,
+          "reward_mean": 1.6077721330525285,
+          "reward_min": 0.9141443324376555,
+          "success_signals": 0,
+          "trajectory_variance": 0.0004987830251886949,
+          "transitions": 160,
+          "unique_goals_observed": 2
+        },
+        "passed": true
+      },
+      "spec": {
+        "constraints": {
+          "action_scale": 1.0,
+          "max_abs_observation": 1000.0,
+          "min_observation_variance": 0.0,
+          "require_finite_observations": true,
+          "require_goal_visible": true
+        },
+        "episode_horizon": 80,
+        "generation": 0,
+        "goal_variations": 2,
+        "rationale": "generation 0: family stage 0, 2 goal variants, horizon 80; prior feedback: none",
+        "rollout_steps": 80,
+        "schema_version": "1.0",
+        "seed": 20260927,
+        "task_family": "reach-v3",
+        "terminate_on_success": false
+      }
+    },
+    {
+      "fingerprint": "e8f066d68fd0",
+      "report": {
+        "checks": {
+          "bounded": true,
+          "build": true,
+          "complexity": true,
+          "diversity": true,
+          "finite": true,
+          "goal_variation": true,
+          "observation_space": true,
+          "rollout": true,
+          "variance": true
+        },
+        "messages": [
+          "complexity: complexity increased 24.7248 -> 49.0096 (delta=24.2848)",
+          "diversity: fingerprint e8f066d68fd0 is new",
+          "build: built Meta-World/MT1 push-v3",
+          "finite: checked 140 transitions",
+          "observation_space: all observations belong to declared space",
+          "bounded: absolute observations <= 1000.0",
+          "variance: mean trajectory variance=0.00063345",
+          "rollout: random/scripted sanity rollout completed",
+          "goal_variation: observed 2/2 expected distinct sampled goals"
+        ],
+        "metrics": {
+          "complexity": {
+            "constraints": 0.2,
+            "family": 20.0,
+            "time_pressure": 17.2,
+            "total": 49.0096,
+            "variation": 11.6096
+          },
+          "episodes": 2,
+          "reward_max": 0.11368387397808022,
+          "reward_mean": 0.05052657640390074,
+          "reward_min": 0.028593829804098317,
+          "success_signals": 0,
+          "trajectory_variance": 0.000633445776805793,
+          "transitions": 140,
+          "unique_goals_observed": 2
+        },
+        "passed": true
+      },
+      "spec": {
+        "constraints": {
+          "action_scale": 0.95,
+          "max_abs_observation": 1000.0,
+          "min_observation_variance": 0.0,
+          "require_finite_observations": true,
+          "require_goal_visible": true
+        },
+        "episode_horizon": 70,
+        "generation": 1,
+        "goal_variations": 4,
+        "rationale": "generation 1: family stage 1, 4 goal variants, horizon 70; prior feedback: none",
+        "rollout_steps": 70,
+        "schema_version": "1.0",
+        "seed": 20261027,
+        "task_family": "push-v3",
+        "terminate_on_success": false
+      }
+    },
+    {
+      "fingerprint": "6b8e2efc88fb",
+      "report": {
+        "checks": {
+          "bounded": true,
+          "build": true,
+          "complexity": true,
+          "diversity": true,
+          "finite": true,
+          "goal_variation": true,
+          "observation_space": true,
+          "rollout": true,
+          "variance": true
+        },
+        "messages": [
+          "complexity: complexity increased 49.0096 -> 72.0368 (delta=23.0272)",
+          "diversity: fingerprint 6b8e2efc88fb is new",
+          "build: built Meta-World/MT1 pick-place-v3",
+          "finite: checked 120 transitions",
+          "observation_space: all observations belong to declared space",
+          "bounded: absolute observations <= 1000.0",
+          "variance: mean trajectory variance=0.00054156",
+          "rollout: random/scripted sanity rollout completed",
+          "goal_variation: observed 2/2 expected distinct sampled goals"
+        ],
+        "metrics": {
+          "complexity": {
+            "constraints": 0.4,
+            "family": 40.0,
+            "time_pressure": 17.6,
+            "total": 72.0368,
+            "variation": 14.0368
+          },
+          "episodes": 2,
+          "reward_max": 0.02222144437192799,
+          "reward_mean": 0.005861911616188886,
+          "reward_min": 1.5372779292555618e-07,
+          "success_signals": 0,
+          "trajectory_variance": 0.0005415621861740102,
+          "transitions": 120,
+          "unique_goals_observed": 2
+        },
+        "passed": true
+      },
+      "spec": {
+        "constraints": {
+          "action_scale": 0.9,
+          "max_abs_observation": 1000.0,
+          "min_observation_variance": 0.0,
+          "require_finite_observations": true,
+          "require_goal_visible": true
+        },
+        "episode_horizon": 60,
+        "generation": 2,
+        "goal_variations": 6,
+        "rationale": "generation 2: family stage 2, 6 goal variants, horizon 60; prior feedback: none",
+        "rollout_steps": 60,
+        "schema_version": "1.0",
+        "seed": 20261127,
+        "task_family": "pick-place-v3",
+        "terminate_on_success": false
+      }
+    },
+    {
+      "fingerprint": "2530cb0383e4",
+      "report": {
+        "checks": {
+          "bounded": true,
+          "build": true,
+          "complexity": true,
+          "diversity": true,
+          "finite": true,
+          "goal_variation": true,
+          "observation_space": true,
+          "rollout": true,
+          "variance": true
+        },
+        "messages": [
+          "complexity: complexity increased 72.0368 -> 94.9496 (delta=22.9128)",
+          "diversity: fingerprint 2530cb0383e4 is new",
+          "build: built Meta-World/MT1 door-open-v3",
+          "finite: checked 100 transitions",
+          "observation_space: all observations belong to declared space",
+          "bounded: absolute observations <= 1000.0",
+          "variance: mean trajectory variance=0.00004331",
+          "rollout: random/scripted sanity rollout completed",
+          "goal_variation: observed 2/2 expected distinct sampled goals"
+        ],
+        "metrics": {
+          "complexity": {
+            "constraints": 1.1,
+            "family": 60.0,
+            "time_pressure": 18.0,
+            "total": 94.9496,
+            "variation": 15.8496
+          },
+          "episodes": 2,
+          "reward_max": 0.5825081713749541,
+          "reward_mean": 0.5012166902894684,
+          "reward_min": 0.39421900718257635,
+          "success_signals": 0,
+          "trajectory_variance": 4.3313740561216514e-05,
+          "transitions": 100,
+          "unique_goals_observed": 2
+        },
+        "passed": true
+      },
+      "spec": {
+        "constraints": {
+          "action_scale": 0.85,
+          "max_abs_observation": 1000.0,
+          "min_observation_variance": 0.0,
+          "require_finite_observations": true,
+          "require_goal_visible": true
+        },
+        "episode_horizon": 50,
+        "generation": 3,
+        "goal_variations": 8,
+        "rationale": "generation 3: family stage 3, 8 goal variants, horizon 50; prior feedback: none",
+        "rollout_steps": 50,
+        "schema_version": "1.0",
+        "seed": 20261227,
+        "task_family": "door-open-v3",
+        "terminate_on_success": true
+      }
+    }
+  ],
+  "experiment": "minimal_metaworld_curriculum",
+  "platform": "macOS-26.3.2-arm64-arm-64bit",
+  "policy_training": false,
+  "python": "3.12.13",
+  "rollout_policy": "random",
+  "rounds_accepted": 4,
+  "rounds_requested": 4,
+  "seed": 20260927
+}

@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "spade-metaworld-designer"
+version = "0.1.0"
+description = "A SPADE-inspired environment designer loop for MetaWorld (no policy training)."
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+dependencies = [
+  "gymnasium>=1.0,<2",
+  "metaworld>=3.0.0,<4",
+  "numpy>=1.26,<3",
+  "pydantic>=2.7,<3",
+  "PyYAML>=6.0,<7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9", "ruff>=0.8"]
+
+[project.scripts]
+spade-metaworld = "spade_metaworld.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/spade_metaworld"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = ["integration: requires a working MetaWorld/MuJoCo installation"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+

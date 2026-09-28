@@ -1,0 +1,23 @@
+experiment:
+  name: minimal_metaworld_curriculum
+  seed: 20260927
+  rounds: 4
+  max_proposals_per_round: 8
+  output_dir: results/example_seed_20260927
+designer:
+  task_families:
+  - reach-v3
+  - push-v3
+  - pick-place-v3
+  - door-open-v3
+  - assembly-v3
+  initial_goal_variations: 2
+  initial_horizon: 80
+  horizon_decrement: 10
+  goal_variation_increment: 2
+  family_every_n_rounds: 1
+validation:
+  rollout_episodes: 2
+  rollout_policy: random
+  require_diversity: true
+  minimum_complexity_delta: 0.01

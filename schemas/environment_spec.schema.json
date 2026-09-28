@@ -1,0 +1,115 @@
+{
+  "$defs": {
+    "Constraints": {
+      "additionalProperties": false,
+      "properties": {
+        "action_scale": {
+          "default": 1.0,
+          "exclusiveMinimum": 0,
+          "maximum": 1.0,
+          "title": "Action Scale",
+          "type": "number"
+        },
+        "max_abs_observation": {
+          "default": 1000.0,
+          "exclusiveMinimum": 0,
+          "title": "Max Abs Observation",
+          "type": "number"
+        },
+        "min_observation_variance": {
+          "default": 0.0,
+          "minimum": 0,
+          "title": "Min Observation Variance",
+          "type": "number"
+        },
+        "require_finite_observations": {
+          "default": true,
+          "title": "Require Finite Observations",
+          "type": "boolean"
+        },
+        "require_goal_visible": {
+          "default": true,
+          "title": "Require Goal Visible",
+          "type": "boolean"
+        }
+      },
+      "title": "Constraints",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Structured output contract for the environment designer.",
+  "properties": {
+    "constraints": {
+      "$ref": "#/$defs/Constraints"
+    },
+    "episode_horizon": {
+      "maximum": 500,
+      "minimum": 20,
+      "title": "Episode Horizon",
+      "type": "integer"
+    },
+    "generation": {
+      "minimum": 0,
+      "title": "Generation",
+      "type": "integer"
+    },
+    "goal_variations": {
+      "maximum": 50,
+      "minimum": 1,
+      "title": "Goal Variations",
+      "type": "integer"
+    },
+    "rationale": {
+      "maxLength": 500,
+      "minLength": 1,
+      "title": "Rationale",
+      "type": "string"
+    },
+    "rollout_steps": {
+      "maximum": 500,
+      "minimum": 1,
+      "title": "Rollout Steps",
+      "type": "integer"
+    },
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "seed": {
+      "maximum": 4294967295,
+      "minimum": 0,
+      "title": "Seed",
+      "type": "integer"
+    },
+    "task_family": {
+      "enum": [
+        "reach-v3",
+        "push-v3",
+        "pick-place-v3",
+        "door-open-v3",
+        "assembly-v3"
+      ],
+      "title": "Task Family",
+      "type": "string"
+    },
+    "terminate_on_success": {
+      "default": false,
+      "title": "Terminate On Success",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "generation",
+    "task_family",
+    "goal_variations",
+    "episode_horizon",
+    "rollout_steps",
+    "seed",
+    "rationale"
+  ],
+  "title": "EnvironmentSpec",
+  "type": "object"
+}
