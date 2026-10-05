@@ -81,3 +81,63 @@ MetaWorld constructor inputs. Useful extensions are an LLM-backed proposer, Pare
 multi-axis complexity (instead of one scalar), richer task-specific scripted sanity
 controllers, custom multi-task benchmarks, rendered evidence, and repeated runs across
 platforms. None of those requires policy training.
+
+## Week 2: policy improvement
+
+Week 2 adds a small, tabular MDP around the Week 1 environment-designer loop. It does
+not pretend that continuous MetaWorld robot observations are enumerable states. Instead,
+it treats validated curriculum-design stages as states and SPADE editing decisions as
+actions:
+
+- states: invalid, foundation, varied, intermediate, target, accepted, rejected
+- actions: repair, increase variation, advance task family, tighten constraints, accept
+- transition probabilities: a small, explicit planning model that can later be replaced
+  with empirical frequencies from repeated proposals and validation runs
+- reward: editing has a cost, premature acceptance is penalized, and accepting a valid
+  target-complexity environment earns the terminal reward
+
+The implementation includes a hand-written SQL schema, SQLAlchemy mappings, synchronous
+iterative policy evaluation, exact evaluation via a linear solve, greedy policy
+improvement, policy iteration, convergence plots, and tests.
+
+Run the assignment experiment with:
+
+```bash
+uv run python scripts/run_week2_policy_improvement.py
+```
+
+The outputs are written to `results/week2_policy_improvement/`. The annotated submission
+notebook is `notebooks/week2_policy_improvement.ipynb`.
+
+### Empirical transition model
+
+The next stage replaces the fixed transition probabilities with evidence from two
+sources:
+
+1. the append-only Week 1 `history.jsonl`;
+2. new action-conditioned candidates that are executed by the real MetaWorld validator.
+
+The fitted probability is the posterior mean under a weak Dirichlet prior:
+
+```text
+P_hat(next | state, action)
+  = (observed_count + prior_strength * hand_model_probability)
+    / (total_observations + prior_strength)
+```
+
+The hand model therefore acts only as a one-observation cold-start prior and loses
+influence as evidence accumulates. Every raw observation, fitted probability, reward
+estimate, seed, candidate `EnvironmentSpec`, and validation report is retained in
+SQLite.
+
+Run the empirical experiment with:
+
+```bash
+uv run python scripts/run_empirical_policy_improvement.py \
+  --history results/example_seed_20260927/history.jsonl \
+  --samples-per-action 3 \
+  --prior-strength 1.0
+```
+
+Outputs are written to `results/week2_empirical_model/`. The annotated notebook is
+`notebooks/week2_empirical_transition_model.ipynb`.

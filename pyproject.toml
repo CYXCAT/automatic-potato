@@ -14,10 +14,12 @@ dependencies = [
   "numpy>=1.26,<3",
   "pydantic>=2.7,<3",
   "PyYAML>=6.0,<7",
+  "SQLAlchemy>=2.0,<3",
+  "matplotlib>=3.8,<4",
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=8,<9", "ruff>=0.8"]
+dev = ["pytest>=8,<9", "ruff>=0.8", "jupyter>=1.0,<2"]
 
 [project.scripts]
 spade-metaworld = "spade_metaworld.cli:main"
@@ -33,4 +35,3 @@ markers = ["integration: requires a working MetaWorld/MuJoCo installation"]
 [tool.ruff]
 line-length = 100
 target-version = "py310"
-

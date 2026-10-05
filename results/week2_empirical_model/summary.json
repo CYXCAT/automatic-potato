@@ -1,0 +1,53 @@
+{
+  "active_observations": 51,
+  "empirical_policy": {
+    "foundation": [
+      "advance_family"
+    ],
+    "intermediate": [
+      "advance_family"
+    ],
+    "invalid": [
+      "repair"
+    ],
+    "target": [
+      "accept"
+    ],
+    "varied": [
+      "advance_family"
+    ]
+  },
+  "empirical_values": {
+    "accepted": 0.0,
+    "foundation": 10.958582772231928,
+    "intermediate": 12.901537722134565,
+    "invalid": 9.44132169285818,
+    "rejected": 0.0,
+    "target": 15.0,
+    "varied": 10.931670525272335
+  },
+  "fitted_transition_rows": 38,
+  "history_observations": 4,
+  "manual_policy": {
+    "foundation": [
+      "advance_family"
+    ],
+    "intermediate": [
+      "tighten_constraints"
+    ],
+    "invalid": [
+      "repair"
+    ],
+    "target": [
+      "accept"
+    ],
+    "varied": [
+      "tighten_constraints"
+    ]
+  },
+  "policy_changed_states": [
+    "intermediate",
+    "varied"
+  ],
+  "prior_strength": 1.0
+}

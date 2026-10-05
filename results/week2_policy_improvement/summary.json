@@ -1,0 +1,49 @@
+{
+  "exact_values": {
+    "accepted": 0.0,
+    "foundation": -6.661185845558931,
+    "intermediate": -1.477517015648596,
+    "invalid": -8.60514002366045,
+    "rejected": 0.0,
+    "target": 3.2529477828567104,
+    "varied": -4.8569127636176015
+  },
+  "iterative_sweeps": 79,
+  "iterative_values": {
+    "accepted": 0.0,
+    "foundation": -6.661185845388701,
+    "intermediate": -1.4775170154690849,
+    "invalid": -8.60514002343237,
+    "rejected": 0.0,
+    "target": 3.2529477830422366,
+    "varied": -4.856912763444711
+  },
+  "max_evaluation_error": 2.2808066546531336e-10,
+  "optimal_policy": {
+    "foundation": [
+      "advance_family"
+    ],
+    "intermediate": [
+      "tighten_constraints"
+    ],
+    "invalid": [
+      "repair"
+    ],
+    "target": [
+      "accept"
+    ],
+    "varied": [
+      "tighten_constraints"
+    ]
+  },
+  "optimal_values": {
+    "accepted": 0.0,
+    "foundation": 5.5526341085358935,
+    "intermediate": 10.541203757091905,
+    "invalid": 2.8965038398165985,
+    "rejected": 0.0,
+    "target": 15.0,
+    "varied": 6.930309750540103
+  },
+  "policy_iterations": 2
+}

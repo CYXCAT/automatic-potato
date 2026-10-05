@@ -1,0 +1,306 @@
+[
+  {
+    "action": "repair",
+    "next_state": "invalid",
+    "observed_count": 0,
+    "probability": 0.03,
+    "reward_mean": -2.0,
+    "state": "invalid"
+  },
+  {
+    "action": "repair",
+    "next_state": "foundation",
+    "observed_count": 4,
+    "probability": 0.97,
+    "reward_mean": -0.8928762886597938,
+    "state": "invalid"
+  },
+  {
+    "action": "increase_variation",
+    "next_state": "foundation",
+    "observed_count": 2,
+    "probability": 0.55,
+    "reward_mean": -0.8392,
+    "state": "foundation"
+  },
+  {
+    "action": "increase_variation",
+    "next_state": "varied",
+    "observed_count": 1,
+    "probability": 0.45,
+    "reward_mean": -0.8302222222222223,
+    "state": "foundation"
+  },
+  {
+    "action": "advance_family",
+    "next_state": "invalid",
+    "observed_count": 0,
+    "probability": 0.03,
+    "reward_mean": -2.0,
+    "state": "foundation"
+  },
+  {
+    "action": "advance_family",
+    "next_state": "varied",
+    "observed_count": 0,
+    "probability": 0.08,
+    "reward_mean": -2.0,
+    "state": "foundation"
+  },
+  {
+    "action": "advance_family",
+    "next_state": "intermediate",
+    "observed_count": 4,
+    "probability": 0.89,
+    "reward_mean": -0.9320808988764047,
+    "state": "foundation"
+  },
+  {
+    "action": "tighten_constraints",
+    "next_state": "invalid",
+    "observed_count": 0,
+    "probability": 0.025,
+    "reward_mean": -1.5000000000000002,
+    "state": "foundation"
+  },
+  {
+    "action": "tighten_constraints",
+    "next_state": "foundation",
+    "observed_count": 3,
+    "probability": 0.825,
+    "reward_mean": -1.4654287878787882,
+    "state": "foundation"
+  },
+  {
+    "action": "tighten_constraints",
+    "next_state": "varied",
+    "observed_count": 0,
+    "probability": 0.15,
+    "reward_mean": -1.5,
+    "state": "foundation"
+  },
+  {
+    "action": "accept",
+    "next_state": "rejected",
+    "observed_count": 3,
+    "probability": 1.0,
+    "reward_mean": -8.0,
+    "state": "foundation"
+  },
+  {
+    "action": "increase_variation",
+    "next_state": "invalid",
+    "observed_count": 0,
+    "probability": 0.0125,
+    "reward_mean": -1.0,
+    "state": "varied"
+  },
+  {
+    "action": "increase_variation",
+    "next_state": "varied",
+    "observed_count": 3,
+    "probability": 0.9625,
+    "reward_mean": -0.9368805194805195,
+    "state": "varied"
+  },
+  {
+    "action": "increase_variation",
+    "next_state": "intermediate",
+    "observed_count": 0,
+    "probability": 0.025,
+    "reward_mean": -1.0,
+    "state": "varied"
+  },
+  {
+    "action": "advance_family",
+    "next_state": "invalid",
+    "observed_count": 0,
+    "probability": 0.025,
+    "reward_mean": -2.0,
+    "state": "varied"
+  },
+  {
+    "action": "advance_family",
+    "next_state": "foundation",
+    "observed_count": 0,
+    "probability": 0.025,
+    "reward_mean": -2.0,
+    "state": "varied"
+  },
+  {
+    "action": "advance_family",
+    "next_state": "intermediate",
+    "observed_count": 3,
+    "probability": 0.95,
+    "reward_mean": -1.1541736842105264,
+    "state": "varied"
+  },
+  {
+    "action": "tighten_constraints",
+    "next_state": "invalid",
+    "observed_count": 0,
+    "probability": 0.025,
+    "reward_mean": -1.5000000000000002,
+    "state": "varied"
+  },
+  {
+    "action": "tighten_constraints",
+    "next_state": "varied",
+    "observed_count": 3,
+    "probability": 0.8125,
+    "reward_mean": -1.4693246153846156,
+    "state": "varied"
+  },
+  {
+    "action": "tighten_constraints",
+    "next_state": "intermediate",
+    "observed_count": 0,
+    "probability": 0.1625,
+    "reward_mean": -1.5,
+    "state": "varied"
+  },
+  {
+    "action": "accept",
+    "next_state": "rejected",
+    "observed_count": 3,
+    "probability": 1.0,
+    "reward_mean": -5.0,
+    "state": "varied"
+  },
+  {
+    "action": "increase_variation",
+    "next_state": "invalid",
+    "observed_count": 0,
+    "probability": 0.025,
+    "reward_mean": -1.0,
+    "state": "intermediate"
+  },
+  {
+    "action": "increase_variation",
+    "next_state": "intermediate",
+    "observed_count": 3,
+    "probability": 0.8625,
+    "reward_mean": -0.9279652173913043,
+    "state": "intermediate"
+  },
+  {
+    "action": "increase_variation",
+    "next_state": "target",
+    "observed_count": 0,
+    "probability": 0.1125,
+    "reward_mean": -1.0,
+    "state": "intermediate"
+  },
+  {
+    "action": "advance_family",
+    "next_state": "invalid",
+    "observed_count": 0,
+    "probability": 0.02,
+    "reward_mean": -2.0,
+    "state": "intermediate"
+  },
+  {
+    "action": "advance_family",
+    "next_state": "varied",
+    "observed_count": 0,
+    "probability": 0.03,
+    "reward_mean": -2.0,
+    "state": "intermediate"
+  },
+  {
+    "action": "advance_family",
+    "next_state": "target",
+    "observed_count": 4,
+    "probability": 0.95,
+    "reward_mean": -1.0809473684210524,
+    "state": "intermediate"
+  },
+  {
+    "action": "tighten_constraints",
+    "next_state": "invalid",
+    "observed_count": 0,
+    "probability": 0.025,
+    "reward_mean": -1.5000000000000002,
+    "state": "intermediate"
+  },
+  {
+    "action": "tighten_constraints",
+    "next_state": "intermediate",
+    "observed_count": 3,
+    "probability": 0.8125,
+    "reward_mean": -1.4654553846153844,
+    "state": "intermediate"
+  },
+  {
+    "action": "tighten_constraints",
+    "next_state": "target",
+    "observed_count": 0,
+    "probability": 0.1625,
+    "reward_mean": -1.5,
+    "state": "intermediate"
+  },
+  {
+    "action": "accept",
+    "next_state": "rejected",
+    "observed_count": 3,
+    "probability": 1.0,
+    "reward_mean": -3.0,
+    "state": "intermediate"
+  },
+  {
+    "action": "increase_variation",
+    "next_state": "invalid",
+    "observed_count": 0,
+    "probability": 0.0375,
+    "reward_mean": -1.0,
+    "state": "target"
+  },
+  {
+    "action": "increase_variation",
+    "next_state": "target",
+    "observed_count": 3,
+    "probability": 0.9625,
+    "reward_mean": -0.9491649350649354,
+    "state": "target"
+  },
+  {
+    "action": "advance_family",
+    "next_state": "invalid",
+    "observed_count": 0,
+    "probability": 0.04,
+    "reward_mean": -2.0,
+    "state": "target"
+  },
+  {
+    "action": "advance_family",
+    "next_state": "target",
+    "observed_count": 4,
+    "probability": 0.96,
+    "reward_mean": -1.104401041666667,
+    "state": "target"
+  },
+  {
+    "action": "tighten_constraints",
+    "next_state": "invalid",
+    "observed_count": 0,
+    "probability": 0.0625,
+    "reward_mean": -1.5,
+    "state": "target"
+  },
+  {
+    "action": "tighten_constraints",
+    "next_state": "target",
+    "observed_count": 3,
+    "probability": 0.9375,
+    "reward_mean": -1.4734440000000002,
+    "state": "target"
+  },
+  {
+    "action": "accept",
+    "next_state": "accepted",
+    "observed_count": 3,
+    "probability": 1.0,
+    "reward_mean": 15.0,
+    "state": "target"
+  }
+]
